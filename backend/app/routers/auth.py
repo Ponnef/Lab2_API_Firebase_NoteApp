@@ -7,11 +7,11 @@ from fastapi import APIRouter, HTTPException, Request, Depends
 from fastapi.responses import RedirectResponse
 from firebase_admin import auth as admin_auth
 
-from backend.app.schemas.auth import (
+from app.schemas.auth_schemas import (
     SignupRequest, LoginRequest, GoogleLoginRequest
 )
-from backend.app.core.firebase_config import get_pyrebase_auth, init_firebase_admin
-from backend.app.dependencies.auth import get_current_user
+from app.core.firebase_config import get_pyrebase_auth, init_firebase_admin
+from app.dependencies.auth_dependencies import get_current_user
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

@@ -6,9 +6,8 @@ OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://kmhvy-34-125-197-209.run.pinggy-f
 
 client = Client(host=OLLAMA_HOST)
 
-def chat_with_model(messages: list[dict]) -> str:
-    response = client.chat(
-        model=MODEL,
-        messages=messages
-    )
+def summarize_note(content: str) -> str:
+    prompt = f"Tóm tắt nội dung sau đây trong 1 câu ngắn gọn: {content}"
+    messages = [{"role": "user", "content": prompt}]
+    response = client.chat(model=MODEL, messages=messages)
     return response["message"]["content"]
