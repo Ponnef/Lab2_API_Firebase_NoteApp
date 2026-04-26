@@ -1,5 +1,5 @@
 import os
-import secrets
+import secrets as python_secrets # Đã đổi tên để tránh trùng lặp
 from urllib.parse import urlencode
 
 import requests
@@ -19,9 +19,10 @@ auth_client = get_pyrebase_auth()
 init_firebase_admin()
 
 
-import streamlit as st
+# Import biến secrets từ config của mình
+from app.core.firebase_config import secrets
 
-google_cfg = st.secrets["google-login"]
+google_cfg = secrets["google-login"]
 
 GOOGLE_URL = google_cfg["google-url"]
 GOOGLE_CLIENT_ID = google_cfg["google_client_id"]
@@ -70,7 +71,8 @@ def google_login(payload: GoogleLoginRequest):
 
 @router.get("/google/start")
 def google_start():
-    state = secrets.token_urlsafe(32)
+    # Sử dụng tên mới python_secrets ở đây
+    state = python_secrets.token_urlsafe(32)
 
     params = {
         "client_id": GOOGLE_CLIENT_ID,
@@ -82,8 +84,9 @@ def google_start():
         "prompt": "select_account",
     }
 
+    # ĐÃ SỬA LẠI ĐÚNG LINK GOOGLE
     google_auth_url = (
-        "https://accounts.google.com/o/oauth2/v2/auth?"
+         "https://accounts.google.com/o/oauth2/v2/auth?"
         + urlencode(params)
     )
 
