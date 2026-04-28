@@ -5,7 +5,7 @@
 * ### Lớp/Khóa: 24CTT3/K24
 * ### Ứng dụng ghi chú cá nhân sử dụng **FastAPI** (Backend) và **Streamlit** (Frontend) tích hợp xác thực Google.
 
-PonNote là một ứng dụng ghi chú cá nhân (Cloud-based Notepad) được xây dựng theo mô hình Client-Server. Ứng dụng cho phép người dùng đăng nhập an toàn và quản lý các ghi chú của mình trên nền tảng đám mây, đảm bảo dữ liệu luôn được đồng bộ và truy cập được mọi lúc, mọi nơi.
+* ### PonNote là một ứng dụng ghi chú cá nhân được xây dựng theo mô hình Client-Server. Ứng dụng cho phép người dùng đăng nhập an toàn và quản lý các ghi chú của mình trên nền tảng đám mây, đảm bảo dữ liệu luôn được đồng bộ và truy cập được mọi lúc, mọi nơi.
 
 ## 🛠️ Hướng dẫn cài đặt Environment
 
