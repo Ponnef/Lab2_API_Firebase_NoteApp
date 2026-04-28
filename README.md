@@ -11,6 +11,30 @@
    ```
 
 2. **Cài đặt thư viện:**
-``` bash
-pip install -r requirements.txt
-```
+   ``` bash
+   pip install -r requirements.txt
+   ```
+
+## Hướng dẫn chạy Backend
+1. **Đảm bảo bạn đã có file $backend/serviceAccountKey.json$ từ Firebase Console
+2. **Di chuyển đến thư mục backend:
+   ```bash
+   cd backend
+   ```
+3. **Khởi chạy Server:**
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+## Hướng dẫn chạy Frontend
+
+1. **Đảm bảo có file $frontend/.streamlit/secrets.toml$ đã được cấu hình đầy đủ Client ID và API Key.
+2. **Di chuyển đến thư mục frontend:
+   ```bash
+   cd frontend
+   ```
+3. **Khởi chạy ứng dụng:**
+   ```bash
+   streamlit run app.py
+   ```
+Ứng dụng sẽ tự động mở trên trình duyệt tại: http://localhost:8501
+
