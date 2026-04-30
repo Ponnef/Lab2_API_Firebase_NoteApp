@@ -19,6 +19,15 @@
    ``` bash
    pip install -r requirements.txt
    ```
+3. Tạo thêm file `secret.toml` trong folder frontend
+   ``` bash
+   [firebase_client]
+   #to do
+   [firebase_admin]
+   #to do
+   [google-login]
+   #to do
+   111
 
 ## Hướng dẫn chạy Backend
 1. Đảm bảo bạn đã có file `backend/serviceAccountKey.json` từ Firebase Console
