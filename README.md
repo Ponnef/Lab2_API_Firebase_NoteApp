@@ -103,5 +103,5 @@ frontend/app/
 │
 └── app.py
 ```
-### **🎥 Video demo**
-video [https://drive.google.com/file/d/1FMI1TrbBpy7Qer7qiTewV2GhvAPPzNz6/view?usp=sharing]
+### **[🎥 Video demo] (https://drive.google.com/file/d/1FMI1TrbBpy7Qer7qiTewV2GhvAPPzNz6/view?usp=sharing)**
+
